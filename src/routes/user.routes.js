@@ -33,6 +33,6 @@ router.route("/avatar").patch(verifyJwt, upload.single("avatar"), updateUserAvat
 router.route("/cover-image").patch(verifyJwt, upload.single("coverImage"), updateUserCoverImage)
 
 router.route("/c/:username").get(verifyJwt, getUserChannelProfile)
-router.route("history").get(verifyJwt, getWatchHistory)//user kuch bhej nhi rha isliye get
+router.route("/history").get(verifyJwt, getWatchHistory)//user kuch bhej nhi rha isliye get
 
 export default router;
